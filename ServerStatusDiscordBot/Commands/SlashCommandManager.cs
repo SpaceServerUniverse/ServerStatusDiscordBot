@@ -9,7 +9,7 @@ namespace ServerStatusDiscordBot.Commands {
 
         public static void RegisterSlashCommand(DiscordSocketClient client) {
             try {
-                  _ = CreateGuildCommand<StatusSlashCommand>(client, 366613089694777355);
+                  _ = CreateGrobalCommand<StatusSlashCommand>(client);
 
             } catch (HttpException exception) {
                 var json = JsonConvert.SerializeObject(exception.Errors, Formatting.Indented);
